@@ -7,11 +7,16 @@
   <meta name="description" content="A comprehensive chronological guide to the 8 major eras and sub-periods of English Literature.">
   <style>
     :root {
-      --primary-color: #1e293b;
+      --primary-color: #0f172a;
       --accent-color: #b45309;
+      --accent-hover: #92400e;
       --bg-light: #f8fafc;
       --border-color: #e2e8f0;
       --text-main: #334155;
+    }
+    
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -27,10 +32,53 @@
       max-width: 960px;
       margin: 0 auto;
       padding: 20px;
-      box-sizing: border-box;
     }
 
-    /* Header & Navigation */
+    /* Top Navigation Bar */
+    nav.top-nav {
+      background-color: var(--primary-color);
+      padding: 14px 24px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.top-nav .brand {
+      color: #ffffff;
+      font-family: Georgia, Cambria, serif;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav.top-nav .nav-links {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav.top-nav .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav.top-nav .nav-links a:hover,
+    nav.top-nav .nav-links a.active {
+      color: #ffffff;
+    }
+
+    /* Header & Title Banner */
     header {
       background-color: var(--primary-color);
       color: #ffffff;
@@ -90,6 +138,17 @@
       margin: 0;
     }
 
+    .era-title a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .era-title a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
     .era-dates {
       color: var(--accent-color);
       font-weight: 700;
@@ -107,11 +166,21 @@
     }
 
     .sub-card {
+      display: block;
       background: var(--bg-light);
       border: 1px solid var(--border-color);
       padding: 12px;
       border-radius: 6px;
       font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .sub-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-color);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
     .sub-card strong {
@@ -119,10 +188,24 @@
       color: var(--primary-color);
     }
 
+    .sub-card:hover strong {
+      color: var(--accent-color);
+    }
+
     .sub-card span {
       color: var(--accent-color);
       font-size: 0.82rem;
       font-weight: 600;
+    }
+
+    .sub-link-inline {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .sub-link-inline:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -141,8 +224,25 @@
   </style>
 </head>
 <body>
-
   <div class="container">
+    
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="top-nav">
+      <a href="index.html" class="brand">English Literature Insights</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home Timeline</a></li>
+        <li><a href="about-english-literature.html" class="active">About & Structure</a></li>
+        <li><a href="the-old-english-period.html">Old English</a></li>
+        <li><a href="the-middle-english-period.html">Middle English</a></li>
+        <li><a href="the-renaissance-period.html">Renaissance</a></li>
+        <li><a href="the-neo-classical-period.html">Neo-Classical</a></li>
+        <li><a href="the-romantic-period.html">Romantic</a></li>
+        <li><a href="the-victorian-period.html">Victorian</a></li>
+        <li><a href="the-modern-period.html">Modern</a></li>
+        <li><a href="the-post-modern-period.html">Post-Modern</a></li>
+      </ul>
+    </nav>
+
     <header>
       <span class="badge">Reference Guide</span>
       <h1>About English Literature</h1>
@@ -155,98 +255,116 @@
         <!-- 1. OLD ENGLISH -->
         <article class="era-card">
           <div class="era-header">
-            <h2 class="era-title">1. Old (Ancient) English Period</h2>
+            <h2 class="era-title">
+              <a href="the-old-english-period.html">1. Old (Ancient) English Period</a>
+            </h2>
             <span class="era-dates">450 – 1066 A.D.</span>
           </div>
           <p>Anglo-Saxon invasion, heroic oral poetry, Christian monastic scribes, and manuscripts such as <em>Beowulf</em>.</p>
+          <div class="sub-grid">
+            <a href="the-anglo-saxon-period.html" class="sub-card">
+              <strong>The Anglo-Saxon Period</strong>
+              <span>450 – 1066 A.D.</span>
+            </a>
+          </div>
         </article>
 
         <!-- 2. MIDDLE ENGLISH -->
         <article class="era-card">
           <div class="era-header">
-            <h2 class="era-title">2. Middle English Period</h2>
+            <h2 class="era-title">
+              <a href="the-middle-english-period.html">2. Middle English Period</a>
+            </h2>
             <span class="era-dates">1066 – 1500 A.D.</span>
           </div>
           <div class="sub-grid">
-            <div class="sub-card">
+            <a href="the-anglo-norman-period.html" class="sub-card">
               <strong>The Anglo-Norman Period</strong>
               <span>1066 – 1340 A.D.</span>
-            </div>
-            <div class="sub-card">
+            </a>
+            <a href="the-age-of-chaucer.html" class="sub-card">
               <strong>The Age of Chaucer</strong>
               <span>1340 – 1400 A.D.</span>
-            </div>
-            <div class="sub-card">
+            </a>
+            <a href="the-dark-or-barren-period.html" class="sub-card">
               <strong>Dark / Barren Period</strong>
               <span>1400 – 1485/1500 A.D.</span>
-            </div>
+            </a>
           </div>
         </article>
 
         <!-- 3. RENAISSANCE -->
         <article class="era-card">
           <div class="era-header">
-            <h2 class="era-title">3. The Renaissance / Early Modern Period</h2>
+            <h2 class="era-title">
+              <a href="the-renaissance-period.html">3. The Renaissance / Early Modern Period</a>
+            </h2>
             <span class="era-dates">1500 – 1660 A.D.</span>
           </div>
           <div class="sub-grid">
-            <div class="sub-card">
+            <a href="preparation-for-renaissance.html" class="sub-card">
               <strong>Preparation of Renaissance</strong>
               <span>1500 – 1558 A.D.</span>
-            </div>
-            <div class="sub-card">
+            </a>
+            <a href="the-elizabethan-period.html" class="sub-card">
               <strong>The Elizabethan Period</strong>
               <span>1558 – 1603 A.D.</span>
-            </div>
-            <div class="sub-card">
+            </a>
+            <a href="the-jacobean-period.html" class="sub-card">
               <strong>The Jacobean Period</strong>
               <span>1603 – 1625 A.D.</span>
-              <small style="display:block; margin-top:4px;">(Includes Age of Shakespeare: 1590–1616 A.D.)</small>
-            </div>
-            <div class="sub-card">
+              <small style="display:block; margin-top:4px; color:#64748b;">
+                (Includes <span class="sub-link-inline">Age of Shakespeare: 1590–1616</span>)
+              </small>
+            </a>
+            <a href="the-caroline-period.html" class="sub-card">
               <strong>The Caroline Period</strong>
               <span>1625 – 1649 A.D.</span>
-            </div>
-            <div class="sub-card">
+            </a>
+            <a href="the-commonwealth-period.html" class="sub-card">
               <strong>The Commonwealth Period</strong>
               <span>1649 – 1660 A.D.</span>
-            </div>
-            <div class="sub-card">
+            </a>
+            <a href="puritan-period.html" class="sub-card">
               <strong>Puritan Period (Overlapping)</strong>
               <span>1620 – 1660 A.D.</span>
-            </div>
+            </a>
           </div>
         </article>
 
         <!-- 4. NEO-CLASSICAL -->
         <article class="era-card">
           <div class="era-header">
-            <h2 class="era-title">4. Neo-Classical Period</h2>
+            <h2 class="era-title">
+              <a href="the-neo-classical-period.html">4. Neo-Classical Period</a>
+            </h2>
             <span class="era-dates">1660 – 1798 A.D.</span>
           </div>
           <div class="sub-grid">
-            <div class="sub-card">
+            <a href="the-restoration-period.html" class="sub-card">
               <strong>The Restoration Period</strong>
               <span>1660 – 1700 A.D.</span>
-              <small style="display:block;">(Age of John Dryden)</small>
-            </div>
-            <div class="sub-card">
+              <small style="display:block; color:#64748b;">(Age of John Dryden)</small>
+            </a>
+            <a href="the-augustan-period.html" class="sub-card">
               <strong>The Augustan Period</strong>
               <span>1700 – 1745 A.D.</span>
-              <small style="display:block;">(Age of Pope & Swift)</small>
-            </div>
-            <div class="sub-card">
+              <small style="display:block; color:#64748b;">(Age of Pope & Swift)</small>
+            </a>
+            <a href="the-age-of-sensibility.html" class="sub-card">
               <strong>The Age of Sensibility</strong>
               <span>1745 – 1785/1798 A.D.</span>
-              <small style="display:block;">(Age of Reason / Dr. Johnson)</small>
-            </div>
+              <small style="display:block; color:#64748b;">(Age of Reason / Dr. Johnson)</small>
+            </a>
           </div>
         </article>
 
         <!-- 5. ROMANTIC -->
         <article class="era-card">
           <div class="era-header">
-            <h2 class="era-title">5. Romantic Period</h2>
+            <h2 class="era-title">
+              <a href="the-romantic-period.html">5. Romantic Period</a>
+            </h2>
             <span class="era-dates">1798 – 1832 A.D.</span>
           </div>
           <p>Emphasis on nature, emotion, individualism, imagination, and reaction against Enlightenment rationalism.</p>
@@ -255,43 +373,49 @@
         <!-- 6. VICTORIAN -->
         <article class="era-card">
           <div class="era-header">
-            <h2 class="era-title">6. Victorian Period</h2>
+            <h2 class="era-title">
+              <a href="the-victorian-period.html">6. Victorian Period</a>
+            </h2>
             <span class="era-dates">1832 – 1901 A.D.</span>
           </div>
           <div class="sub-grid">
-            <div class="sub-card">
+            <a href="the-pre-raphaelites.html" class="sub-card">
               <strong>The Pre-Raphaelites</strong>
               <span>1848 – 1860 A.D.</span>
-            </div>
-            <div class="sub-card">
+            </a>
+            <a href="aestheticism-and-decadence.html" class="sub-card">
               <strong>Aestheticism and Decadence</strong>
               <span>1880 – 1901 A.D.</span>
-            </div>
+            </a>
           </div>
         </article>
 
         <!-- 7. MODERN -->
         <article class="era-card">
           <div class="era-header">
-            <h2 class="era-title">7. Modern Period (1st Half of 20th Century)</h2>
+            <h2 class="era-title">
+              <a href="the-modern-period.html">7. Modern Period (1st Half of 20th Century)</a>
+            </h2>
             <span class="era-dates">1901 – 1939 A.D.</span>
           </div>
           <div class="sub-grid">
-            <div class="sub-card">
+            <a href="the-edwardian-period.html" class="sub-card">
               <strong>The Edwardian Period</strong>
               <span>1901 – 1910 A.D.</span>
-            </div>
-            <div class="sub-card">
+            </a>
+            <a href="the-georgian-period.html" class="sub-card">
               <strong>The Georgian Period</strong>
               <span>1910 – 1936 A.D.</span>
-            </div>
+            </a>
           </div>
         </article>
 
         <!-- 8. POST-MODERN -->
         <article class="era-card">
           <div class="era-header">
-            <h2 class="era-title">8. Post-Modern Period (2nd Half of 20th Century)</h2>
+            <h2 class="era-title">
+              <a href="the-post-modern-period.html">8. Post-Modern Period (2nd Half of 20th Century)</a>
+            </h2>
             <span class="era-dates">1939 – Present</span>
           </div>
           <p>Meta-fiction, post-colonialism, Theatre of the Absurd, and contemporary literary trends.</p>
@@ -301,9 +425,8 @@
     </main>
 
     <footer>
-      <p>&copy; English Literature Insights. Structured for academic navigation.</p>
+      <p>&copy; 2026 English Literature Insights. Structured for academic navigation.</p>
     </footer>
   </div>
-
 </body>
 </html>
