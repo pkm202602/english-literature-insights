@@ -1,0 +1,392 @@
+<!-- =========================================================
+     CONTEMPORARY ERA HUB PAGE (BLOGGER READY)
+     ========================================================= -->
+
+<style>
+  .lit-era-wrap {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.65;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .lit-era-wrap * {
+    box-sizing: border-box;
+  }
+
+  /* Hero Banner */
+  .lit-hero-box {
+    background: #042f2e;
+    color: #ffffff;
+    padding: 40px 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .lit-era-badge {
+    background: #0d9488;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .lit-hero-box h1 {
+    font-family: Georgia, Cambria, 'Times New Roman', serif;
+    font-size: 2.3rem;
+    margin: 8px 0;
+    color: #ffffff !important;
+    line-height: 1.25;
+  }
+
+  .lit-hero-box p {
+    font-size: 1.05rem;
+    color: #ccfbf1;
+    max-width: 750px;
+    margin: 10px auto 0 auto;
+  }
+
+  /* Section Titles */
+  .lit-section-heading {
+    font-family: Georgia, Cambria, serif;
+    font-size: 1.5rem;
+    color: #1e293b;
+    border-bottom: 2px solid #0d9488;
+    padding-bottom: 8px;
+    margin: 35px 0 20px 0;
+  }
+
+  /* Key Features List */
+  .lit-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .lit-feature-item {
+    background: #f8fafc;
+    border-left: 4px solid #0d9488;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .lit-feature-item strong {
+    color: #1e293b;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  .lit-feature-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #475569;
+  }
+
+  /* Sub-Periods Grid */
+  .lit-subperiod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+
+  .lit-subcard {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .lit-subcard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  }
+
+  .lit-subcard-tag {
+    color: #0d9488;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .lit-subcard h3 {
+    font-family: Georgia, Cambria, serif;
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+    color: #1e293b;
+  }
+
+  .lit-subcard p {
+    font-size: 0.9rem;
+    color: #475569;
+    margin: 0 0 10px 0;
+  }
+
+  .lit-highlight-box {
+    background: #f1f5f9;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    color: #334155;
+    margin-top: 10px;
+  }
+
+  .lit-highlight-box strong {
+    color: #0d9488;
+  }
+
+  /* Writers & Works Tags */
+  .lit-authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    margin-bottom: 35px;
+  }
+
+  .lit-author-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .lit-author-card strong {
+    color: #1e293b;
+    font-size: 0.98rem;
+    display: block;
+  }
+
+  .lit-author-card span {
+    font-size: 0.83rem;
+    color: #0d9488;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .lit-author-card p {
+    margin: 0;
+    font-size: 0.87rem;
+    color: #64748b;
+  }
+
+  /* Post Directory Section */
+  .lit-directory-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 35px;
+  }
+
+  .lit-post-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+  }
+
+  .lit-post-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .lit-post-list li:last-child {
+    border-bottom: none;
+  }
+
+  .lit-post-list a {
+    color: #0d9488;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .lit-post-list a:hover {
+    text-decoration: underline;
+  }
+
+  /* Navigation Footer */
+  .lit-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 2px solid #e2e8f0;
+  }
+
+  .lit-nav-btn {
+    display: inline-block;
+    background: #042f2e;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+
+  .lit-nav-btn:hover {
+    background: #0d9488;
+  }
+
+  @media (max-width: 600px) {
+    .lit-hero-box h1 { font-size: 1.7rem; }
+    .lit-nav-bar { flex-direction: column; text-align: center; }
+  }
+</style>
+
+<div class="lit-era-wrap">
+
+  <!-- HERO BANNER -->
+  <header class="lit-hero-box">
+    <span class="lit-era-badge">2000 – Present A.D.</span>
+    <h1>The Contemporary Period</h1>
+    <p>A 21st-century literary landscape defined by digital hyper-connectivity, climate fiction, post-9/11 anxieties, speculative realism, and globalized multicultural perspectives.</p>
+  </header>
+
+  <!-- KEY CHARACTERISTICS -->
+  <section>
+    <h2 class="lit-section-heading">Core Literary Features & Trends</h2>
+    <div class="lit-features-grid">
+      <div class="lit-feature-item">
+        <strong>Digital & Transmedia Narrative</strong>
+        <p>Integration of social media dynamics, messaging formats, internet culture, and multi-platform storytelling within prose.</p>
+      </div>
+      <div class="lit-feature-item">
+        <strong>Climate Fiction (Cli-Fi) & Anthropocene</strong>
+        <p>Literary responses to environmental crises, ecological collapse, global warming, and human impact on planetary systems.</p>
+      </div>
+      <div class="lit-feature-item">
+        <strong>Speculative & Dystopian Realism</strong>
+        <p>Blending grounded realism with speculative elements, artificial intelligence ethics, and near-future dystopian settings.</p>
+      </div>
+      <div class="lit-feature-item">
+        <strong>Global Identity & Migration Voices</strong>
+        <p>Focus on diaspora narratives, cultural hybridization, intersectional identity, and de-centered global storytelling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUB-PERIODS / MOVEMENTS GRID -->
+  <section>
+    <h2 class="lit-section-heading">Major Contemporary Movements & Waves</h2>
+    <div class="lit-subperiod-grid">
+
+      <!-- 1. Post-9/11 & Anxiety Fiction -->
+      <div class="lit-subcard">
+        <span class="lit-subcard-tag">2001 – 2010 A.D.</span>
+        <h3>Post-9/11 & Surveillance Literature</h3>
+        <p>Explorations of geopolitical trauma, state surveillance, terror, vulnerabilities of modern urban life, and existential uncertainty.</p>
+        <div class="lit-highlight-box">
+          <strong>Key Figures:</strong> Cormac McCarthy, Ian McEwan, Don DeLillo, and Mohsin Hamid.
+        </div>
+      </div>
+
+      <!-- 2. The Cli-Fi & Dystopian Boom -->
+      <div class="lit-subcard">
+        <span class="lit-subcard-tag">2010 – 2020 A.D.</span>
+        <h3>Ecological & Speculative Fiction</h3>
+        <p>Rise of climate catastrophe narratives, bioethics warnings, memory degradation, and post-apocalyptic survival stories.</p>
+        <div class="lit-highlight-box">
+          <strong>Key Figures:</strong> Kazuo Ishiguro, Margaret Atwood, Richard Powers, and Barbara Kingsolver.
+        </div>
+      </div>
+
+      <!-- 3. Hyper-Modern & Diaspora Voices -->
+      <div class="lit-subcard">
+        <span class="lit-subcard-tag">2015 – Present A.D.</span>
+        <h3>Diaspora & Post-Truth Realism</h3>
+        <p>Literary works navigating digital media saturation, social justice, post-colonial migration, identity fluidity, and algorithmic life.</p>
+        <div class="lit-highlight-box">
+          <strong>Key Figures:</strong> Chimamanda Ngozi Adichie, Zadie Smith, Ocean Vuong, and Sally Rooney.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAJOR AUTHORS & WORKS -->
+  <section>
+    <h2 class="lit-section-heading">Prominent 21st-Century Authors & Works</h2>
+    <div class="lit-authors-grid">
+      <div class="lit-author-card">
+        <strong>Kazuo Ishiguro</strong>
+        <span>1954 – Present</span>
+        <p><em>Never Let Me Go, Klara and the Sun, The Buried Giant</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Cormac McCarthy</strong>
+        <span>1933 – 2023 A.D.</span>
+        <p><em>The Road, No Country for Old Men, The Passenger</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Margaret Atwood</strong>
+        <span>1939 – Present</span>
+        <p><em>Oryx and Crake, The Testaments, MaddAddam</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Chimamanda Ngozi Adichie</strong>
+        <span>1977 – Present</span>
+        <p><em>Half of a Yellow Sun, Americanah, Purple Hibiscus</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Zadie Smith</strong>
+        <span>1975 – Present</span>
+        <p><em>White Teeth, On Beauty, Swing Time, The Fraud</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Haruki Murakami</strong>
+        <span>1949 – Present</span>
+        <p><em>1Q84, Kafka on the Shore, Colorless Tsukuru Tazaki</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Ian McEwan</strong>
+        <span>1948 – Present</span>
+        <p><em>Atonement, Saturday, Machines Like Me</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Hilary Mantel</strong>
+        <span>1952 – 2022 A.D.</span>
+        <p><em>Wolf Hall, Bring Up the Bodies, The Mirror & the Light</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTORY OF DETAILED ARTICLES -->
+  <section>
+    <h2 class="lit-section-heading">Detailed Articles & Author Studies</h2>
+    <div class="lit-directory-box">
+      <p style="margin: 0 0 10px 0; font-size: 0.9rem; color: #64748b;">Read our deep-dive analysis posts for this period:</p>
+      <ul class="lit-post-list">
+        <li><a href="/search/label/Contemporary">Browse All Contemporary Period Posts &amp; Notes →</a></li>
+        <!-- Add links to individual posts here as you publish -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="lit-nav-bar">
+    <a href="/p/post-modern-period.html" class="lit-nav-btn">← Post-Modern Period</a>
+    <a href="/p/home.html" class="lit-nav-btn">Home Hub</a>
+    <a href="/p/history-of-english-literature.html" class="lit-nav-btn">All Literary Eras Overview →</a>
+  </nav>
+
+</div>
