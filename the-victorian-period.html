@@ -1,0 +1,402 @@
+<!-- =========================================================
+     VICTORIAN ERA HUB PAGE (BLOGGER READY)
+     ========================================================= -->
+
+<style>
+  .lit-era-wrap {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.65;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .lit-era-wrap * {
+    box-sizing: border-box;
+  }
+
+  /* Hero Banner */
+  .lit-hero-box {
+    background: #4c0519;
+    color: #ffffff;
+    padding: 40px 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .lit-era-badge {
+    background: #9f1239;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .lit-hero-box h1 {
+    font-family: Georgia, Cambria, 'Times New Roman', serif;
+    font-size: 2.3rem;
+    margin: 8px 0;
+    color: #ffffff !important;
+    line-height: 1.25;
+  }
+
+  .lit-hero-box p {
+    font-size: 1.05rem;
+    color: #fecdd3;
+    max-width: 750px;
+    margin: 10px auto 0 auto;
+  }
+
+  /* Section Titles */
+  .lit-section-heading {
+    font-family: Georgia, Cambria, serif;
+    font-size: 1.5rem;
+    color: #1e293b;
+    border-bottom: 2px solid #9f1239;
+    padding-bottom: 8px;
+    margin: 35px 0 20px 0;
+  }
+
+  /* Key Features List */
+  .lit-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .lit-feature-item {
+    background: #f8fafc;
+    border-left: 4px solid #9f1239;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .lit-feature-item strong {
+    color: #1e293b;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  .lit-feature-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #475569;
+  }
+
+  /* Sub-Periods Grid */
+  .lit-subperiod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+
+  .lit-subcard {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .lit-subcard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  }
+
+  .lit-subcard-tag {
+    color: #9f1239;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .lit-subcard h3 {
+    font-family: Georgia, Cambria, serif;
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+    color: #1e293b;
+  }
+
+  .lit-subcard p {
+    font-size: 0.9rem;
+    color: #475569;
+    margin: 0 0 10px 0;
+  }
+
+  .lit-highlight-box {
+    background: #f1f5f9;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    color: #334155;
+    margin-top: 10px;
+  }
+
+  .lit-highlight-box strong {
+    color: #9f1239;
+  }
+
+  /* Writers & Works Tags */
+  .lit-authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    margin-bottom: 35px;
+  }
+
+  .lit-author-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .lit-author-card strong {
+    color: #1e293b;
+    font-size: 0.98rem;
+    display: block;
+  }
+
+  .lit-author-card span {
+    font-size: 0.83rem;
+    color: #9f1239;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .lit-author-card p {
+    margin: 0;
+    font-size: 0.87rem;
+    color: #64748b;
+  }
+
+  /* Post Directory Section */
+  .lit-directory-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 35px;
+  }
+
+  .lit-post-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+  }
+
+  .lit-post-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .lit-post-list li:last-child {
+    border-bottom: none;
+  }
+
+  .lit-post-list a {
+    color: #9f1239;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .lit-post-list a:hover {
+    text-decoration: underline;
+  }
+
+  /* Navigation Footer */
+  .lit-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 2px solid #e2e8f0;
+  }
+
+  .lit-nav-btn {
+    display: inline-block;
+    background: #4c0519;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+
+  .lit-nav-btn:hover {
+    background: #9f1239;
+  }
+
+  @media (max-width: 600px) {
+    .lit-hero-box h1 { font-size: 1.7rem; }
+    .lit-nav-bar { flex-direction: column; text-align: center; }
+  }
+</style>
+
+<div class="lit-era-wrap">
+
+  <!-- HERO BANNER -->
+  <header class="lit-hero-box">
+    <span class="lit-era-badge">1832 – 1901 A.D.</span>
+    <h1>The Victorian Period</h1>
+    <p>An age of industrial expansion, social reform novels, moral earnestness, scientific crisis, and aesthetic rebellion under Queen Victoria.</p>
+  </header>
+
+  <!-- KEY CHARACTERISTICS -->
+  <section>
+    <h2 class="lit-section-heading">Core Literary Movements & Innovations</h2>
+    <div class="lit-features-grid">
+      <div class="lit-feature-item">
+        <strong>Rise of the Social Reform Novel</strong>
+        <p>Prose fiction became the dominant genre, addressing industrialization, class divides, child labor, and women's social roles.</p>
+      </div>
+      <div class="lit-feature-item">
+        <strong>Moral Earnestness & Doubt</strong>
+        <p>Literary tension between religious faith, utilitarian morality, and scientific discoveries (Darwinian evolution).</p>
+      </div>
+      <div class="lit-feature-item">
+        <strong>Serialized Publication</strong>
+        <p>Novels published in affordable monthly installments in periodicals, creating cliffhangers and widespread public readership.</p>
+      </div>
+      <div class="lit-feature-item">
+        <strong>Pre-Raphaelitism & Aestheticism</strong>
+        <p>Rebellion against industrial commercialism via medieval art revival, sensory richness, and later "art for art's sake."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUB-PERIODS GRID -->
+  <section>
+    <h2 class="lit-section-heading">Sub-Periods & Literary Movements</h2>
+    <div class="lit-subperiod-grid">
+
+      <!-- 1. Early Victorian -->
+      <div class="lit-subcard">
+        <span class="lit-subcard-tag">1832 – 1848 A.D.</span>
+        <h3>Early Victorian Period</h3>
+        <p>Defined by social unrest, industrial growth, political reform acts, and the birth of social-problem fiction.</p>
+        <div class="lit-highlight-box">
+          <strong>Key Figures:</strong> Early Charles Dickens, Elizabeth Gaskell, and the Brontë sisters.
+        </div>
+      </div>
+
+      <!-- 2. Mid-Victorian -->
+      <div class="lit-subcard">
+        <span class="lit-subcard-tag">1848 – 1870 A.D.</span>
+        <h3>High Victorian Period</h3>
+        <p>Peak economic prosperity, imperial expansion, religious debate, dramatic monologues, and philosophical essay writing.</p>
+        <div class="lit-highlight-box">
+          <strong>Key Figures:</strong> Alfred Lord Tennyson, Robert Browning, George Eliot, and Matthew Arnold.
+        </div>
+      </div>
+
+      <!-- 3. Pre-Raphaelite Brotherhood -->
+      <div class="lit-subcard">
+        <span class="lit-subcard-tag">1848 – 1860 A.D.</span>
+        <h3>Pre-Raphaelite Movement</h3>
+        <p>An artistic and poetic brotherhood seeking detailed realism, medieval symbolism, and vivid sensual imagery in poetry.</p>
+        <div class="lit-highlight-box">
+          <strong>Key Figures:</strong> Dante Gabriel Rossetti, Christina Rossetti, and William Morris.
+        </div>
+      </div>
+
+      <!-- 4. Late Victorian & Decadence -->
+      <div class="lit-subcard">
+        <span class="lit-subcard-tag">1870 – 1901 A.D.</span>
+        <h3>Late Victorian / Aestheticism</h3>
+        <p>Characterized by Victorian decline, pessimistic realism, gothic revival, wit, decadence, and the "Art for Art's Sake" movement.</p>
+        <div class="lit-highlight-box">
+          <strong>Key Figures:</strong> Oscar Wilde, Thomas Hardy, Robert Louis Stevenson, and Walter Pater.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAJOR AUTHORS & WORKS -->
+  <section>
+    <h2 class="lit-section-heading">Master Novelists, Poets & Playwrights</h2>
+    <div class="lit-authors-grid">
+      <div class="lit-author-card">
+        <strong>Charles Dickens</strong>
+        <span>1812 – 1870 A.D.</span>
+        <p><em>Great Expectations, A Tale of Two Cities, Oliver Twist, Bleak House</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Charlotte Brontë</strong>
+        <span>1816 – 1855 A.D.</span>
+        <p><em>Jane Eyre, Villette</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Emily Brontë</strong>
+        <span>1818 – 1848 A.D.</span>
+        <p><em>Wuthering Heights</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>George Eliot</strong>
+        <span>1819 – 1880 A.D.</span>
+        <p><em>Middlemarch, Silas Marner, The Mill on the Floss</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Thomas Hardy</strong>
+        <span>1840 – 1928 A.D.</span>
+        <p><em>Tess of the d'Urbervilles, Jude the Obscure, Far from the Madding Crowd</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Alfred Lord Tennyson</strong>
+        <span>1809 – 1892 A.D.</span>
+        <p><em>In Memoriam A.H.H., The Charge of the Light Brigade, Ulysses</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Robert Browning</strong>
+        <span>1812 – 1889 A.D.</span>
+        <p><em>My Last Duchess, Fra Lippo Lippi (Dramatic Monologues)</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Oscar Wilde</strong>
+        <span>1854 – 1900 A.D.</span>
+        <p><em>The Importance of Being Earnest, The Picture of Dorian Gray</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTORY OF DETAILED ARTICLES -->
+  <section>
+    <h2 class="lit-section-heading">Detailed Articles & Author Studies</h2>
+    <div class="lit-directory-box">
+      <p style="margin: 0 0 10px 0; font-size: 0.9rem; color: #64748b;">Read our deep-dive analysis posts for this period:</p>
+      <ul class="lit-post-list">
+        <li><a href="/search/label/Victorian">Browse All Victorian Period Posts &amp; Notes →</a></li>
+        <!-- Add links to individual posts here as you publish -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="lit-nav-bar">
+    <a href="/p/romantic-period.html" class="lit-nav-btn">← Romantic Period</a>
+    <a href="/p/home.html" class="lit-nav-btn">Home Hub</a>
+    <a href="/p/modern-period.html" class="lit-nav-btn">Modern Period →</a>
+  </nav>
+
+</div>
