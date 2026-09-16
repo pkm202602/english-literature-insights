@@ -53,20 +53,39 @@
         .work-group {
             margin-bottom: 20px;
         }
+        /* বাটন গ্রুপ স্টাইল */
         .btn-container {
             margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         .back-btn {
             display: inline-block;
-            background-color: #7f8c8d;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
         }
-        .back-btn:hover {
+        .jacobean-btn {
+            background-color: #7f8c8d;
+        }
+        .jacobean-btn:hover {
             background-color: #95a5a6;
+        }
+        .renaissance-btn {
+            background-color: #2c3e50;
+        }
+        .renaissance-btn:hover {
+            background-color: #34495e;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -110,9 +129,10 @@
         <h2>Contemporaries of the Age</h2>
         <p>While Shakespeare dominated, this age was also enriched by <strong>Ben Jonson</strong>, famous for his realistic, sharp satirical comedies like <em>The Alchemist</em>, and <strong>Christopher Marlowe</strong>, whose early tragedies laid the groundwork for Shakespeare's success.</p>
 
-        <!-- আগের পেজের লিঙ্ক (ব্যাক বাটন) এখানে যুক্ত করা হলো -->
+        <!-- ডবল ব্যাক-লিঙ্ক বাটন এখানে যুক্ত করা হলো -->
         <div class="btn-container">
-            <a href="the-jacobean-period.html" class="back-btn">&larr; Back to: The Jacobean Period</a>
+            <a href="the-jacobean-period.html" class="back-btn jacobean-btn">&larr; Back to: The Jacobean Period</a>
+            <a href="the-renaissance-period.html" class="back-btn renaissance-btn">&larr;&larr; Main Era: The Renaissance Period</a>
         </div>
     </div>
 
