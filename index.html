@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Literature Insights | Main Timeline & History Hub</title>
+  <meta name="description" content="An academic reference hub and interactive timeline exploring the 8 major eras and sub-periods of English Literature.">
+  <style>
+    :root {
+      --primary-color: #0f172a;
+      --secondary-color: #1e293b;
+      --accent-color: #b45309;
+      --accent-hover: #d97706;
+      --bg-light: #f8fafc;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --text-main: #334155;
+      --text-muted: #64748b;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Top Navigation Bar */
+    nav.top-nav {
+      background-color: var(--primary-color);
+      padding: 14px 24px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.top-nav .brand {
+      color: #ffffff;
+      font-family: Georgia, Cambria, serif;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav.top-nav .nav-links {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav.top-nav .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav.top-nav .nav-links a:hover,
+    nav.top-nav .nav-links a.active {
+      color: #ffffff;
+    }
+
+    /* Hero Banner */
+    header.hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 50px 30px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 35px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    header.hero h1 {
+      font-family: Georgia, Cambria, serif;
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    header.hero p {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      max-width: 780px;
+      margin: 0 auto 20px auto;
+    }
+
+    .badge-hero {
+      background: var(--accent-color);
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    /* Quick Stats Bar */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .stat-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .stat-card h3 {
+      font-size: 1.8rem;
+      color: var(--accent-color);
+      font-family: Georgia, Cambria, serif;
+    }
+
+    .stat-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Section Heading */
+    .section-title {
+      font-family: Georgia, Cambria, serif;
+      font-size: 1.75rem;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .section-title a {
+      font-size: 0.9rem;
+      font-family: system-ui, sans-serif;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .section-title a:hover {
+      text-decoration: underline;
+    }
+
+    /* Era Main Grid */
+    .era-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .era-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .era-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+    }
+
+    .era-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+      gap: 10px;
+    }
+
+    .era-card-header h2 {
+      font-family: Georgia, Cambria, serif;
+      font-size: 1.45rem;
+      margin: 0;
+    }
+
+    .era-card-header h2 a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .era-card-header h2 a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    .era-dates-badge {
+      background: var(--bg-light);
+      color: var(--accent-color);
+      border: 1px solid var(--border-color);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+
+    .era-desc {
+      font-size: 0.96rem;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    /* Sub-Periods Grid Inside Era Card */
+    .subperiods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .sub-item {
+      display: block;
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+    }
+
+    .sub-item:hover {
+      background-color: #ffffff;
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+    }
+
+    .sub-item strong {
+      display: block;
+      color: var(--secondary-color);
+      font-size: 0.92rem;
+      margin-bottom: 2px;
+    }
+
+    .sub-item:hover strong {
+      color: var(--accent-color);
+    }
+
+    .sub-item span {
+      font-size: 0.8rem;
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .sub-item small {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 30px 0 20px 0;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      header.hero h1 { font-size: 1.85rem; }
+      .era-card-header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- TOP NAVIGATION -->
+    <nav class="top-nav">
+      <a href="index.html" class="brand">English Literature Insights</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home Timeline</a></li>
+        <li><a href="about-english-literature.html">About & Structure</a></li>
+        <li><a href="the-old-english-period.html">Old English</a></li>
+        <li><a href="the-middle-english-period.html">Middle English</a></li>
+        <li><a href="the-renaissance-period.html">Renaissance</a></li>
+        <li><a href="the-neo-classical-period.html">Neo-Classical</a></li>
+        <li><a href="the-romantic-period.html">Romantic</a></li>
+        <li><a href="the-victorian-period.html">Victorian</a></li>
+        <li><a href="the-modern-period.html">Modern</a></li>
+        <li><a href="the-post-modern-period.html">Post-Modern</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <header class="hero">
+      <span class="badge-hero">Academic Reference Portal</span>
+      <h1>English Literature Insights</h1>
+      <p>Explore the complete chronological evolution of the English literary canon — from ancient Anglo-Saxon oral epics to 21st-century contemporary narratives.</p>
+    </header>
+
+    <!-- QUICK STATS -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>8</h3>
+        <p>Major Literary Eras</p>
+      </div>
+      <div class="stat-card">
+        <h3>20+</h3>
+        <p>Sub-Periods & Movements</p>
+      </div>
+      <div class="stat-card">
+        <h3>1500+</h3>
+        <p>Years of Literary History</p>
+      </div>
+    </div>
+
+    <!-- MAIN TIMELINE HUB -->
+    <main>
+      <div class="section-title">
+        <h2>Chronological Era Directory</h2>
+        <a href="about-english-literature.html">View Detailed Index →</a>
+      </div>
+
+      <div class="era-grid">
+
+        <!-- ERA 1: OLD ENGLISH -->
+        <article class="era-card">
+          <div class="era-card-header">
+            <h2><a href="the-old-english-period.html">1. Old (Ancient) English Period</a></h2>
+            <span class="era-dates-badge">450 – 1066 A.D.</span>
+          </div>
+          <p class="era-desc">The dawn of English literature following the Germanic migrations to Britain. Characterized by heroic oral poetry, scop recitations, Christian monastic scribes, and manuscripts such as <em>Beowulf</em>.</p>
+          <div class="subperiods-grid">
+            <a href="the-anglo-saxon-period.html" class="sub-item">
+              <strong>The Anglo-Saxon Period</strong>
+              <span>450 – 1066 A.D.</span>
+              <small>Tribal culture, King Alfred & Wyrd</small>
+            </a>
+          </div>
+        </article>
+
+        <!-- ERA 2: MIDDLE ENGLISH -->
+        <article class="era-card">
+          <div class="era-card-header">
+            <h2><a href="the-middle-english-period.html">2. Middle English Period</a></h2>
+            <span class="era-dates-badge">1066 – 1500 A.D.</span>
+          </div>
+          <p class="era-desc">Transitional period sparked by the Norman Conquest of 1066. Witnessed the transformation of Old English into Middle English, chivalric romances, social realism, and early printing.</p>
+          <div class="subperiods-grid">
+            <a href="the-anglo-norman-period.html" class="sub-item">
+              <strong>The Anglo-Norman Period</strong>
+              <span>1066 – 1340 A.D.</span>
+              <small>French influence & Arthurian romance</small>
+            </a>
+            <a href="the-age-of-chaucer.html" class="sub-item">
+              <strong>The Age of Chaucer</strong>
+              <span>1340 – 1400 A.D.</span>
+              <small>The Canterbury Tales & social satire</small>
+            </a>
+            <a href="the-dark-or-barren-period.html" class="sub-item">
+              <strong>Dark / Barren Period</strong>
+              <span>1400 – 1485/1500 A.D.</span>
+              <small>Caxton printing press & Malory's prose</small>
+            </a>
+          </div>
+        </article>
+
+        <!-- ERA 3: RENAISSANCE -->
+        <article class="era-card">
+          <div class="era-card-header">
+            <h2><a href="the-renaissance-period.html">3. The Renaissance / Early Modern Period</a></h2>
+            <span class="era-dates-badge">1500 – 1660 A.D.</span>
+          </div>
+          <p class="era-desc">The "rebirth" of classical learning, humanism, and artistic expression. Brought an unprecedented boom in Elizabethan drama, sonnets, metaphysical poetry, and monumental prose.</p>
+          <div class="subperiods-grid">
+            <a href="preparation-for-renaissance.html" class="sub-item">
+              <strong>Preparation for Renaissance</strong>
+              <span>1500 – 1558 A.D.</span>
+              <small>Early Tudors, Sir Thomas More & Sonnets</small>
+            </a>
+            <a href="the-elizabethan-period.html" class="sub-item">
+              <strong>The Elizabethan Period</strong>
+              <span>1558 – 1603 A.D.</span>
+              <small>Golden Age of Drama & Marlowe</small>
+            </a>
+            <a href="the-jacobean-period.html" class="sub-item">
+              <strong>The Jacobean Period</strong>
+              <span>1603 – 1625 A.D.</span>
+              <small>King James Bible & Metaphysical poetry</small>
+            </a>
+            <a href="age-of-shakespeare.html" class="sub-item">
+              <strong>Age of Shakespeare</strong>
+              <span>1590 – 1616 A.D.</span>
+              <small>The Four Great Tragedies & Sonnets</small>
+            </a>
+            <a href="the-caroline-period.html" class="sub-item">
+              <strong>The Caroline Period</strong>
+              <span>1625 – 1649 A.D.</span>
+              <small>Cavalier Poets & Carpe Diem verse</small>
+            </a>
+            <a href="the-commonwealth-period.html" class="sub-item">
+              <strong>The Commonwealth Period</strong>
+              <span>1649 – 1660 A.D.</span>
+              <small>Puritan Interregnum & Milton's prose</small>
+            </a>
+            <a href="puritan-period.html" class="sub-item">
+              <strong>Puritan Period (Overlapping)</strong>
+              <span>1620 – 1660 A.D.</span>
+              <small>John Milton & Pilgrim's Progress</small>
+            </a>
+          </div>
+        </article>
+
+        <!-- ERA 4: NEO-CLASSICAL -->
+        <article class="era-card">
+          <div class="era-card-header">
+            <h2><a href="the-neo-classical-period.html">4. Neo-Classical Period</a></h2>
+            <span class="era-dates-badge">1660 – 1798 A.D.</span>
+          </div>
+          <p class="era-desc">An age of reason, order, classicism, and sharp social satire modelled after classical Roman masters. Marked by the emergence of English journalism, coffee-house culture, and early novel forms.</p>
+          <div class="subperiods-grid">
+            <a href="the-restoration-period.html" class="sub-item">
+              <strong>The Restoration Period</strong>
+              <span>1660 – 1700 A.D.</span>
+              <small>Age of Dryden & Comedy of Manners</small>
+            </a>
+            <a href="the-augustan-period.html" class="sub-item">
+              <strong>The Augustan Period</strong>
+              <span>1700 – 1745 A.D.</span>
+              <small>Age of Pope, Swift & early novel</small>
+            </a>
+            <a href="the-age-of-sensibility.html" class="sub-item">
+              <strong>The Age of Sensibility</strong>
+              <span>1745 – 1785/1798 A.D.</span>
+              <small>Age of Dr. Johnson & Gothic horror</small>
+            </a>
+          </div>
+        </article>
+
+        <!-- ERA 5: ROMANTIC -->
+        <article class="era-card">
+          <div class="era-card-header">
+            <h2><a href="the-romantic-period.html">5. Romantic Period</a></h2>
+            <span class="era-dates-badge">1798 – 1832 A.D.</span>
+          </div>
+          <p class="era-desc">The Golden Age of English Poetry. A passionate rebellion against Enlightenment rationalism and industrialization, prioritizing raw emotion, nature, imagination, and individual liberty.</p>
+          <div class="subperiods-grid">
+            <a href="the-romantic-period.html" class="sub-item">
+              <strong>Romantic Masters & Poets</strong>
+              <span>1798 – 1832 A.D.</span>
+              <small>Wordsworth, Coleridge, Keats, Shelley & Byron</small>
+            </a>
+          </div>
+        </article>
+
+        <!-- ERA 6: VICTORIAN -->
+        <article class="era-card">
+          <div class="era-card-header">
+            <h2><a href="the-victorian-period.html">6. Victorian Period</a></h2>
+            <span class="era-dates-badge">1832 – 1901 A.D.</span>
+          </div>
+          <p class="era-desc">Defined by the reign of Queen Victoria, industrial expansion, science vs. religion conflicts, and the golden rise of the English social novel (Charles Dickens, Brontë sisters).</p>
+          <div class="subperiods-grid">
+            <a href="the-pre-raphaelites.html" class="sub-item">
+              <strong>The Pre-Raphaelites</strong>
+              <span>1848 – 1860 A.D.</span>
+              <small>Sensuous art, symbolism & Rossettis</small>
+            </a>
+            <a href="aestheticism-and-decadence.html" class="sub-item">
+              <strong>Aestheticism and Decadence</strong>
+              <span>1880 – 1901 A.D.</span>
+              <small>"Art for Art's Sake" & Oscar Wilde</small>
+            </a>
+          </div>
+        </article>
+
+        <!-- ERA 7: MODERN -->
+        <article class="era-card">
+          <div class="era-card-header">
+            <h2><a href="the-modern-period.html">7. Modern Period (1st Half of 20th Century)</a></h2>
+            <span class="era-dates-badge">1901 – 1939 A.D.</span>
+          </div>
+          <p class="era-desc">A radical aesthetic revolution triggered by World War I and technological transformation. Writers embraced "Make it new!", stream of consciousness, broken chronologies, and post-war disillusionment.</p>
+          <div class="subperiods-grid">
+            <a href="the-edwardian-period.html" class="sub-item">
+              <strong>The Edwardian Period</strong>
+              <span>1901 – 1910 A.D.</span>
+              <small>Social criticism & class divides</small>
+            </a>
+            <a href="the-georgian-period.html" class="sub-item">
+              <strong>The Georgian Period</strong>
+              <span>1910 – 1936 A.D.</span>
+              <small>Pastoral poetry before WWI</small>
+            </a>
+          </div>
+        </article>
+
+        <!-- ERA 8: POST-MODERN & CONTEMPORARY -->
+        <article class="era-card">
+          <div class="era-card-header">
+            <h2><a href="the-post-modern-period.html">8. Post-Modern & Contemporary Period</a></h2>
+            <span class="era-dates-badge">1939 – Present</span>
+          </div>
+          <p class="era-desc">Break from grand narratives into metafiction, irony, absurdism, post-colonial voices, climate fiction (cli-fi), digital hyper-reality, and diverse global perspectives.</p>
+          <div class="subperiods-grid">
+            <a href="the-post-modern-period.html" class="sub-item">
+              <strong>The Post-Modern Period</strong>
+              <span>1939 – Present</span>
+              <small>Beckett, Orwell, Vonnegut & Metafiction</small>
+            </a>
+            <a href="the-contemporary-period.html" class="sub-item">
+              <strong>The Contemporary Period</strong>
+              <span>2000 – Present</span>
+              <small>Cli-Fi, Digital narratives & Global identity</small>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2026 <a href="index.html">English Literature Insights</a>. Curated for students, researchers, and literature enthusiasts.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

@@ -1,420 +1,158 @@
-<!-- =========================================================
-     RENAISSANCE / EARLY MODERN ERA HUB PAGE (BLOGGER READY)
-     ========================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Renaissance Period - English Literature Insights</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .era-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #2980b9;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .sub-section {
+            background-color: #ebf5fb;
+            border-left: 3px solid #3498db;
+            margin: 10px 0 10px 20px;
+            padding: 10px 15px;
+            border-radius: 3px;
+        }
+        .explore-btn {
+            display: inline-block;
+            background-color: #2980b9;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .explore-btn:hover {
+            background-color: #1f618d;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
 
-<style>
-  .lit-era-wrap {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #1e293b;
-    line-height: 1.65;
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 10px;
-    box-sizing: border-box;
-  }
+    <header>
+        <h1>English Literature Insights</h1>
+        <p>Exploring the Eras of English Literary History</p>
+    </header>
 
-  .lit-era-wrap * {
-    box-sizing: border-box;
-  }
+    <nav>
+        <a href="about-english-literature.html">Home</a>
+        <a href="the-middle-english-period.html">Middle English</a>
+        <a href="the-renaissance-period.html">The Renaissance</a>
+    </nav>
 
-  /* Hero Banner */
-  .lit-hero-box {
-    background: #1e293b;
-    color: #ffffff;
-    padding: 40px 25px;
-    border-radius: 12px;
-    text-align: center;
-    margin-bottom: 35px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  }
+    <div class="container">
+        <h1>The Renaissance Period (1500–1660)</h1>
+        <p>The <strong>Renaissance Period</strong> signifies the "rebirth" of learning, art, and classical literature in England. Moving away from the medieval mindset, this era triggered an explosion of humanism, scientific curiosity, and some of the greatest theatrical and poetic masterpieces in human history.</p>
+        
+        <p>Explore the specific sub-periods and evolutionary steps of the English Renaissance below:</p>
 
-  .lit-era-badge {
-    background: #b45309;
-    color: #ffffff;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    padding: 4px 14px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 12px;
-  }
-
-  .lit-hero-box h1 {
-    font-family: Georgia, Cambria, 'Times New Roman', serif;
-    font-size: 2.3rem;
-    margin: 8px 0;
-    color: #ffffff !important;
-    line-height: 1.25;
-  }
-
-  .lit-hero-box p {
-    font-size: 1.05rem;
-    color: #cbd5e1;
-    max-width: 750px;
-    margin: 10px auto 0 auto;
-  }
-
-  /* Section Titles */
-  .lit-section-heading {
-    font-family: Georgia, Cambria, serif;
-    font-size: 1.5rem;
-    color: #1e293b;
-    border-bottom: 2px solid #b45309;
-    padding-bottom: 8px;
-    margin: 35px 0 20px 0;
-  }
-
-  /* Key Features List */
-  .lit-features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 14px;
-    margin-bottom: 30px;
-  }
-
-  .lit-feature-item {
-    background: #f8fafc;
-    border-left: 4px solid #b45309;
-    padding: 14px 18px;
-    border-radius: 0 8px 8px 0;
-  }
-
-  .lit-feature-item strong {
-    color: #1e293b;
-    display: block;
-    margin-bottom: 4px;
-    font-size: 1rem;
-  }
-
-  .lit-feature-item p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #475569;
-  }
-
-  /* Sub-Periods Grid */
-  .lit-subperiod-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 18px;
-    margin-bottom: 35px;
-  }
-
-  .lit-subcard {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .lit-subcard:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-  }
-
-  .lit-subcard-tag {
-    color: #b45309;
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 6px;
-  }
-
-  .lit-subcard h3 {
-    font-family: Georgia, Cambria, serif;
-    font-size: 1.3rem;
-    margin: 0 0 10px 0;
-    color: #1e293b;
-  }
-
-  .lit-subcard p {
-    font-size: 0.9rem;
-    color: #475569;
-    margin: 0 0 10px 0;
-  }
-
-  .lit-highlight-box {
-    background: #f1f5f9;
-    border-radius: 6px;
-    padding: 10px 12px;
-    font-size: 0.85rem;
-    color: #334155;
-    margin-top: 10px;
-  }
-
-  .lit-highlight-box strong {
-    color: #b45309;
-  }
-
-  /* Writers & Works Tags */
-  .lit-authors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 12px;
-    margin-bottom: 35px;
-  }
-
-  .lit-author-card {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 14px 16px;
-  }
-
-  .lit-author-card strong {
-    color: #1e293b;
-    font-size: 0.98rem;
-    display: block;
-  }
-
-  .lit-author-card span {
-    font-size: 0.83rem;
-    color: #b45309;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 4px;
-  }
-
-  .lit-author-card p {
-    margin: 0;
-    font-size: 0.87rem;
-    color: #64748b;
-  }
-
-  /* Post Directory Section */
-  .lit-directory-box {
-    background: #f8fafc;
-    border: 1px dashed #cbd5e1;
-    border-radius: 10px;
-    padding: 22px;
-    margin-bottom: 35px;
-  }
-
-  .lit-post-list {
-    list-style: none;
-    padding: 0;
-    margin: 12px 0 0 0;
-  }
-
-  .lit-post-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #e2e8f0;
-  }
-
-  .lit-post-list li:last-child {
-    border-bottom: none;
-  }
-
-  .lit-post-list a {
-    color: #b45309;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .lit-post-list a:hover {
-    text-decoration: underline;
-  }
-
-  /* Navigation Footer */
-  .lit-nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding-top: 20px;
-    border-top: 2px solid #e2e8f0;
-  }
-
-  .lit-nav-btn {
-    display: inline-block;
-    background: #1e293b;
-    color: #ffffff !important;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 10px 18px;
-    border-radius: 6px;
-    transition: background 0.2s ease;
-  }
-
-  .lit-nav-btn:hover {
-    background: #b45309;
-  }
-
-  @media (max-width: 600px) {
-    .lit-hero-box h1 { font-size: 1.7rem; }
-    .lit-nav-bar { flex-direction: column; text-align: center; }
-  }
-</style>
-
-<div class="lit-era-wrap">
-
-  <!-- HERO BANNER -->
-  <header class="lit-hero-box">
-    <span class="lit-era-badge">1500 – 1660 A.D.</span>
-    <h1>The Renaissance & Early Modern Period</h1>
-    <p>A glorious rebirth of classical learning, humanism, artistic innovation, and the golden age of English drama and poetry.</p>
-  </header>
-
-  <!-- KEY CHARACTERISTICS -->
-  <section>
-    <h2 class="lit-section-heading">Core Literary Movements & Innovations</h2>
-    <div class="lit-features-grid">
-      <div class="lit-feature-item">
-        <strong>Humanism & Secularism</strong>
-        <p>A shift from medieval scholasticism to focusing on human potential, individualism, and classical Greek and Latin literature.</p>
-      </div>
-      <div class="lit-feature-item">
-        <strong>Golden Age of Drama</strong>
-        <p>The rise of public theatres (The Globe, The Rose), blank verse tragedy, comedy of humours, and revenge plays.</p>
-      </div>
-      <div class="lit-feature-item">
-        <strong>Poetic Forms & Sonnets</strong>
-        <p>Introduction and perfection of the English (Shakespearean) and Petrarchan sonnets, epic allegories, and pastoral poetry.</p>
-      </div>
-      <div class="lit-feature-item">
-        <strong>Prose & Philosophical Inquiry</strong>
-        <p>Empirical philosophy, personal essays, translation of the King James Bible (1611), and utopian political thought.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SUB-PERIODS GRID -->
-  <section>
-    <h2 class="lit-section-heading">Sub-Periods & Major Ages</h2>
-    <div class="lit-subperiod-grid">
-
-      <!-- 1. Preparation -->
-      <div class="lit-subcard">
-        <span class="lit-subcard-tag">1500 – 1558 A.D.</span>
-        <h3>Preparation of Renaissance</h3>
-        <p>The early groundwork introducing printing, Italian literary influences, and humanism to England under Henry VII and Henry VIII.</p>
-        <div class="lit-highlight-box">
-          <strong>Pioneers:</strong> Sir Thomas More (<em>Utopia</em>), Thomas Wyatt, and Earl of Surrey.
+        <!-- ১. প্রিপারেশন ফর রেনেসাঁ -->
+        <div class="era-card">
+            <h2>1. Preparation for Renaissance (1500–1558)</h2>
+            <p>An era of transition and early seeds where humanism took root in England, laying the groundwork for the literary golden age.</p>
+            <a href="preparation-for-renaissance.html" class="explore-btn">Explore Preparation Era &rarr;</a>
         </div>
-      </div>
 
-      <!-- 2. Elizabethan -->
-      <div class="lit-subcard">
-        <span class="lit-subcard-tag">1558 – 1603 A.D.</span>
-        <h3>The Elizabethan Period</h3>
-        <p>The pinnacle of English literary renaissance during Queen Elizabeth I's reign. Marked by national pride, poetry, and tragic drama.</p>
-        <div class="lit-highlight-box">
-          <strong>Key Figures:</strong> Edmund Spenser, Christopher Marlowe, Sir Philip Sidney, and Early Shakespeare.
+        <!-- ২. এলিজাবেথান পিরিয়ড -->
+        <div class="era-card">
+            <h2>2. The Elizabethan Period (1558–1603)</h2>
+            <p>The golden age of English drama and poetry under Queen Elizabeth I, featuring legendary figures like Christopher Marlowe and Edmund Spenser.</p>
+            <a href="the-elizabethan-period.html" class="explore-btn">Explore Elizabethan Period &rarr;</a>
         </div>
-      </div>
 
-      <!-- 3. Jacobean -->
-      <div class="lit-subcard">
-        <span class="lit-subcard-tag">1603 – 1625 A.D.</span>
-        <h3>The Jacobean Period</h3>
-        <p>Coinciding with King James I. Characterized by darker tragedies, revenge drama, metaphysical poetry, and the King James Bible.</p>
-        <div class="lit-highlight-box">
-          <strong>Sub-Age:</strong> <em>Age of Shakespeare (1590–1616 A.D.)</em> — The height of Shakespearean tragedy & comedy.
+        <!-- ৩. জ্যাকোবিয়ান পিরিয়ড (সাব-সেকশন সহ) -->
+        <div class="era-card">
+            <h2>3. The Jacobean Period (1603–1625)</h2>
+            <p>Named after King James I, this era saw literature become more sophisticated, dark, and philosophically deep.</p>
+            
+            <!-- সাব-সেকশন: এজ অফ শেকসপিয়র -->
+            <div class="sub-section">
+                <h3>Sub-section: Age of Shakespeare (1590–1616)</h3>
+                <p>The peak performance years of William Shakespeare, encompassing his finest tragedies and late romances.</p>
+            </div>
+
+            <!-- সাব-সেকশন: পিউরিটান পিরিয়ড -->
+            <div class="sub-section">
+                <h3>Sub-section: Puritan Period (1620–1660)</h3>
+                <p>A period marked by strict moral values and political shifts, leading towards the closing of theatres and a focus on religious writing.</p>
+            </div>
+
+            <a href="the-jacobean-period.html" class="explore-btn">Explore Jacobean Period &rarr;</a>
         </div>
-      </div>
 
-      <!-- 4. Caroline -->
-      <div class="lit-subcard">
-        <span class="lit-subcard-tag">1625 – 1649 A.D.</span>
-        <h3>The Caroline Period</h3>
-        <p>Reign of King Charles I. Marked by rising political and religious tensions between Royalist Cavaliers and Puritan Parliamentarians.</p>
-        <div class="lit-highlight-box">
-          <strong>Key Figures:</strong> Cavalier Poets (Robert Herrick, Richard Lovelace) and John Ford.
+        <!-- ৪. ক্যারোলিন পিরিয়ড -->
+        <div class="era-card">
+            <h2>4. The Caroline Period (1625–1649)</h2>
+            <p>Ruled by King Charles I, this era is famous for the Cavalier poets, who wrote about loyalty, love, and courtly life.</p>
+            <a href="the-caroline-period.html" class="explore-btn">Explore Caroline Period &rarr;</a>
         </div>
-      </div>
 
-      <!-- 5. Commonwealth -->
-      <div class="lit-subcard">
-        <span class="lit-subcard-tag">1649 – 1660 A.D.</span>
-        <h3>The Commonwealth Period</h3>
-        <p>Also known as the <em>Puritan Interregnum</em> under Oliver Cromwell. Public theatres were closed (1642–1660), shifting focus to political prose.</p>
-        <div class="lit-highlight-box">
-          <strong>Key Figures:</strong> John Milton (political pamphlets), Thomas Hobbes (<em>Leviathan</em>), and Andrew Marvell.
+        <!-- ৫. কমনওয়েলথ পিরিয়ড -->
+        <div class="era-card">
+            <h2>5. The Commonwealth Period / Puritan Interregnum (1649–1660)</h2>
+            <p>A time when England was without a monarch, ruled by Oliver Cromwell. Public theatres were banned, and writers like John Milton dominated with prose and epic thoughts.</p>
+            <a href="the-commonwealth-period.html" class="explore-btn">Explore Commonwealth Period &rarr;</a>
         </div>
-      </div>
-
-      <!-- Overlapping Puritan Period -->
-      <div class="lit-subcard" style="border-top: 3px solid #b45309;">
-        <span class="lit-subcard-tag">1620 – 1660 A.D.</span>
-        <h3>The Puritan Period</h3>
-        <p>An overlapping religious and moral movement spanning the late Jacobean, Caroline, and Commonwealth eras, demanding moral reform and religious devotion.</p>
-      </div>
 
     </div>
-  </section>
 
-  <!-- MAJOR AUTHORS & WORKS -->
-  <section>
-    <h2 class="lit-section-heading">Master Dramatists, Poets & Philosophers</h2>
-    <div class="lit-authors-grid">
-      <div class="lit-author-card">
-        <strong>William Shakespeare</strong>
-        <span>1564 – 1616 A.D.</span>
-        <p><em>Hamlet, Macbeth, Othello, King Lear, Sonnets</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>Christopher Marlowe</strong>
-        <span>1564 – 1593 A.D.</span>
-        <p><em>Doctor Faustus, Tamburlaine the Great</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>John Milton</strong>
-        <span>1608 – 1674 A.D.</span>
-        <p><em>Paradise Lost, Areopagitica, Samson Agonistes</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>Edmund Spenser</strong>
-        <span>1552 – 1599 A.D.</span>
-        <p><em>The Faerie Queene, Amoretti</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>Francis Bacon</strong>
-        <span>1561 – 1626 A.D.</span>
-        <p><em>Essays (Civil and Moral), Novum Organum</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>John Donne</strong>
-        <span>1572 – 1631 A.D.</span>
-        <p><em>Holy Sonnets, The Flea (Metaphysical Poetry)</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>Ben Jonson</strong>
-        <span>1572 – 1637 A.D.</span>
-        <p><em>Volpone, The Alchemist, Every Man in His Humour</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>Sir Thomas More</strong>
-        <span>1478 – 1535 A.D.</span>
-        <p><em>Utopia</em></p>
-      </div>
-    </div>
-  </section>
+    <footer>
+        <p>&copy; 2026 English Literature Insights. All Rights Reserved.</p>
+    </footer>
 
-  <!-- DIRECTORY OF DETAILED ARTICLES -->
-  <section>
-    <h2 class="lit-section-heading">Detailed Articles & Author Studies</h2>
-    <div class="lit-directory-box">
-      <p style="margin: 0 0 10px 0; font-size: 0.9rem; color: #64748b;">Read our deep-dive analysis posts for this period:</p>
-      <ul class="lit-post-list">
-        <li><a href="/2026/09/william-shakespeare-15641616ad-master.html">William Shakespeare (1564–1616 A.D.): Master Dramatist of the Renaissance →</a></li>
-        <li><a href="/search/label/Renaissance">Browse All Renaissance Posts &amp; Notes →</a></li>
-        <!-- Add new blog post links here as you publish -->
-      </ul>
-    </div>
-  </section>
-
-  <!-- NAVIGATION BAR -->
-  <nav class="lit-nav-bar">
-    <a href="/p/middle-english-period.html" class="lit-nav-btn">← Middle English Period</a>
-    <a href="/p/home.html" class="lit-nav-btn">Home Hub</a>
-    <a href="/p/neo-classical-period.html" class="lit-nav-btn">Neo-Classical Period →</a>
-  </nav>
-
-</div>
+</body>
+</html>
