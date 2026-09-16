@@ -1,392 +1,153 @@
-<!-- =========================================================
-     ROMANTIC ERA HUB PAGE (BLOGGER READY)
-     ========================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Romantic Period - English Literature Insights</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .highlight-box {
+            background-color: #e8f8f5;
+            border-left: 5px solid #1abc9c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .author-card {
+            background-color: #fcfcfc;
+            border: 1px solid #eaeded;
+            border-left: 4px solid #16a085;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .btn-container {
+            margin-top: 30px;
+        }
+        .back-btn {
+            display: inline-block;
+            background-color: #7f8c8d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .back-btn:hover {
+            background-color: #95a5a6;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
 
-<style>
-  .lit-era-wrap {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #1e293b;
-    line-height: 1.65;
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 10px;
-    box-sizing: border-box;
-  }
+    <header>
+        <h1>English Literature Insights</h1>
+        <p>Exploring the Eras of English Literary History</p>
+    </header>
 
-  .lit-era-wrap * {
-    box-sizing: border-box;
-  }
+    <nav>
+        <a href="about-english-literature.html">Home</a>
+        <a href="the-neo-classical-period.html">Neo-Classical</a>
+        <a href="the-romantic-period.html">Romantic Period</a>
+    </nav>
 
-  /* Hero Banner */
-  .lit-hero-box {
-    background: #064e3b;
-    color: #ffffff;
-    padding: 40px 25px;
-    border-radius: 12px;
-    text-align: center;
-    margin-bottom: 35px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  }
-
-  .lit-era-badge {
-    background: #047857;
-    color: #ffffff;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    padding: 4px 14px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 12px;
-  }
-
-  .lit-hero-box h1 {
-    font-family: Georgia, Cambria, 'Times New Roman', serif;
-    font-size: 2.3rem;
-    margin: 8px 0;
-    color: #ffffff !important;
-    line-height: 1.25;
-  }
-
-  .lit-hero-box p {
-    font-size: 1.05rem;
-    color: #a7f3d0;
-    max-width: 750px;
-    margin: 10px auto 0 auto;
-  }
-
-  /* Section Titles */
-  .lit-section-heading {
-    font-family: Georgia, Cambria, serif;
-    font-size: 1.5rem;
-    color: #1e293b;
-    border-bottom: 2px solid #047857;
-    padding-bottom: 8px;
-    margin: 35px 0 20px 0;
-  }
-
-  /* Key Features List */
-  .lit-features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 14px;
-    margin-bottom: 30px;
-  }
-
-  .lit-feature-item {
-    background: #f8fafc;
-    border-left: 4px solid #047857;
-    padding: 14px 18px;
-    border-radius: 0 8px 8px 0;
-  }
-
-  .lit-feature-item strong {
-    color: #1e293b;
-    display: block;
-    margin-bottom: 4px;
-    font-size: 1rem;
-  }
-
-  .lit-feature-item p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #475569;
-  }
-
-  /* Sub-Periods Grid */
-  .lit-subperiod-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 18px;
-    margin-bottom: 35px;
-  }
-
-  .lit-subcard {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .lit-subcard:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-  }
-
-  .lit-subcard-tag {
-    color: #047857;
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 6px;
-  }
-
-  .lit-subcard h3 {
-    font-family: Georgia, Cambria, serif;
-    font-size: 1.3rem;
-    margin: 0 0 10px 0;
-    color: #1e293b;
-  }
-
-  .lit-subcard p {
-    font-size: 0.9rem;
-    color: #475569;
-    margin: 0 0 10px 0;
-  }
-
-  .lit-highlight-box {
-    background: #f1f5f9;
-    border-radius: 6px;
-    padding: 10px 12px;
-    font-size: 0.85rem;
-    color: #334155;
-    margin-top: 10px;
-  }
-
-  .lit-highlight-box strong {
-    color: #047857;
-  }
-
-  /* Writers & Works Tags */
-  .lit-authors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 12px;
-    margin-bottom: 35px;
-  }
-
-  .lit-author-card {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 14px 16px;
-  }
-
-  .lit-author-card strong {
-    color: #1e293b;
-    font-size: 0.98rem;
-    display: block;
-  }
-
-  .lit-author-card span {
-    font-size: 0.83rem;
-    color: #047857;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 4px;
-  }
-
-  .lit-author-card p {
-    margin: 0;
-    font-size: 0.87rem;
-    color: #64748b;
-  }
-
-  /* Post Directory Section */
-  .lit-directory-box {
-    background: #f8fafc;
-    border: 1px dashed #cbd5e1;
-    border-radius: 10px;
-    padding: 22px;
-    margin-bottom: 35px;
-  }
-
-  .lit-post-list {
-    list-style: none;
-    padding: 0;
-    margin: 12px 0 0 0;
-  }
-
-  .lit-post-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #e2e8f0;
-  }
-
-  .lit-post-list li:last-child {
-    border-bottom: none;
-  }
-
-  .lit-post-list a {
-    color: #047857;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .lit-post-list a:hover {
-    text-decoration: underline;
-  }
-
-  /* Navigation Footer */
-  .lit-nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding-top: 20px;
-    border-top: 2px solid #e2e8f0;
-  }
-
-  .lit-nav-btn {
-    display: inline-block;
-    background: #064e3b;
-    color: #ffffff !important;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 10px 18px;
-    border-radius: 6px;
-    transition: background 0.2s ease;
-  }
-
-  .lit-nav-btn:hover {
-    background: #047857;
-  }
-
-  @media (max-width: 600px) {
-    .lit-hero-box h1 { font-size: 1.7rem; }
-    .lit-nav-bar { flex-direction: column; text-align: center; }
-  }
-</style>
-
-<div class="lit-era-wrap">
-
-  <!-- HERO BANNER -->
-  <header class="lit-hero-box">
-    <span class="lit-era-badge">1798 – 1832 A.D.</span>
-    <h1>The Romantic Period</h1>
-    <p>A passionate literary revolution prioritizing emotion, individual imagination, sublime nature, and rebellion against industrial logic.</p>
-  </header>
-
-  <!-- KEY CHARACTERISTICS -->
-  <section>
-    <h2 class="lit-section-heading">Core Literary Movements & Innovations</h2>
-    <div class="lit-features-grid">
-      <div class="lit-feature-item">
-        <strong>Primacy of Emotion & Imagination</strong>
-        <p>Replacing Neo-Classical restraint with spontaneous feeling, creative intuition, and deep emotional sensitivity.</p>
-      </div>
-      <div class="lit-feature-item">
-        <strong>Sublime & Nature Worship</strong>
-        <p>Viewing nature as a living divine force, a moral guide, and a source of aesthetic awe and spiritual restoration.</p>
-      </div>
-      <div class="lit-feature-item">
-        <strong>Individualism & Byronic Hero</strong>
-        <p>Focus on solitary identity, non-conformity, passion, and the tragic, melancholic genius defying societal norms.</p>
-      </div>
-      <div class="lit-feature-item">
-        <strong>Supernatural & Gothic Romance</strong>
-        <p>Fascination with medieval folklore, atmospheric terror, psychological shadows, and mysterious occurrences.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SUB-PERIODS GRID -->
-  <section>
-    <h2 class="lit-section-heading">Movements & Generations</h2>
-    <div class="lit-subperiod-grid">
-
-      <!-- 1. First Generation -->
-      <div class="lit-subcard">
-        <span class="lit-subcard-tag">1798 – 1815 A.D.</span>
-        <h3>First-Generation Romantics</h3>
-        <p>Pioneered by the Lake Poets. Defined by nature worship, rustic simplicity, pantheism, and conversational poetic diction.</p>
-        <div class="lit-highlight-box">
-          <strong>Key Figures:</strong> William Wordsworth, Samuel Taylor Coleridge, and William Blake (precursor).
+    <div class="container">
+        <h1>The Romantic Period (1798–1832)</h1>
+        <p>The <strong>Romantic Period</strong> is universally celebrated as the **Golden Age of English Poetry**. Birthed as a rebellion against the scientific rationality of the Enlightenment and the industrial urbanization of the era, Romanticism shifted the focus of literature back to the **glory of nature, raw human emotion, vivid imagination, and individual freedom**.</p>
+        
+        <div class="highlight-box">
+            <h3>Core Themes of Romanticism:</h3>
+            <ul>
+                <li><strong>Return to Nature:</strong> Viewing nature not as a machine, but as a living spiritual teacher and a refuge from the polluted industrial cities.</li>
+                <li><strong>Emotion & Imagination:</strong> Prioritizing intense personal feelings, melancholy, intuition, and creative imagination over cold logic.</li>
+                <li><strong>The Supernatural & Medievalism:</strong> A profound fascination with gothic mysteries, folklore, ancient legends, and the exotic past.</li>
+            </ul>
         </div>
-      </div>
 
-      <!-- 2. Second Generation -->
-      <div class="lit-subcard">
-        <span class="lit-subcard-tag">1810 – 1824 A.D.</span>
-        <h3>Second-Generation Romantics</h3>
-        <p>Marked by intense passion, political radicalism, tragic youth, sensual beauty, and romantic idealization of classical Greece.</p>
-        <div class="lit-highlight-box">
-          <strong>Key Figures:</strong> Lord Byron, Percy Bysshe Shelley, and John Keats.
+        <h2>The Pillars of the Golden Age</h2>
+        <p>The literary landscape of this era was primarily dominated by two generations of brilliant poets:</p>
+
+        <!-- ১. উইলিয়াম ওয়ার্ডসওয়ার্থ -->
+        <div class="author-card">
+            <h3>1. William Wordsworth (1770–1850)</h3>
+            <p>Known as the <em>"Poet of Nature"</em>. His joint publication of <strong>Lyrical Ballads</strong> (1798) with Coleridge officially launched the Romantic movement. Wordsworth believed poetry should be written in the simple language of common people and defined it as the <em>"spontaneous overflow of powerful feelings."</em></p>
+            <p><strong>Famous Works:</strong> <em>The Prelude</em>, <em>Tintern Abbey</em>, <em>I Wandered Lonely as a Cloud (Daffodils)</em>.</p>
         </div>
-      </div>
 
-      <!-- 3. Romantic Prose & Novels -->
-      <div class="lit-subcard">
-        <span class="lit-subcard-tag">1798 – 1832 A.D.</span>
-        <h3>The Romantic Novel & Fiction</h3>
-        <p>Emergence of Gothic horror, Regency novels of manners and social observation, and historical romantic fiction.</p>
-        <div class="lit-highlight-box">
-          <strong>Key Figures:</strong> Jane Austen, Mary Shelley (<em>Frankenstein</em>), and Sir Walter Scott.
+        <!-- ২. স্যামুয়েল টেলর কোলরিজ -->
+        <div class="author-card">
+            <h3>2. Samuel Taylor Coleridge (1772–1834)</h3>
+            <p>A close friend of Wordsworth and a profound philosopher-poet. Coleridge was the master of <strong>Supernaturalism</strong>, bringing mysterious, eerie, and supernatural elements into realistic human contexts through his incredible imagination.</p>
+            <p><strong>Famous Works:</strong> <em>The Rime of the Ancient Mariner</em>, <em>Kubla Khan</em>, <em>Christabel</em>.</p>
         </div>
-      </div>
 
+        <!-- ৩. জন কিটস -->
+        <div class="author-card">
+            <h3>3. John Keats (1795–1821)</h3>
+            <p>The quintessential <em>"Poet of Beauty"</em> belonging to the younger generation of Romantics. Despite dying tragically at the young age of 25, Keats left an immortal legacy centered on the pursuit of ultimate beauty, famously writing: <em>"Beauty is truth, truth beauty."</em> His poems are famous for their rich, intense imagery that stimulates all five human senses.</p>
+            <p><strong>Famous Works:</strong> <em>Ode on a Grecian Urn</em>, <em>Ode to a Nightingale</em>, <em>Endymion</em>, <em>To Autumn</em>.</p>
+        </div>
+
+        <h2>Other Towering Figures</h2>
+        <ul>
+            <li><strong>Lord Byron & P.B. Shelley:</strong> Revolutionary poets of the younger generation who fought passionately for freedom and broke societal conventions.</li>
+            <li><strong>Jane Austen:</strong> The legendary novelist of the era who chose to focus on the realism of English middle-class domestic life and romance (e.g., <em>Pride and Prejudice</em>).</li>
+            <li><strong>Mary Shelley:</strong> Birthed modern science fiction and gothic horror with her immortal novel <em>Frankenstein</em>.</li>
+        </ul>
+
+        <!-- ব্যাক বাটন -->
+        <div class="btn-container">
+            <a href="about-english-literature.html" class="back-btn">&larr; Back to Home Dashboard</a>
+        </div>
     </div>
-  </section>
 
-  <!-- MAJOR AUTHORS & WORKS -->
-  <section>
-    <h2 class="lit-section-heading">Master Poets, Novelists & Essayists</h2>
-    <div class="lit-authors-grid">
-      <div class="lit-author-card">
-        <strong>William Wordsworth</strong>
-        <span>1770 – 1850 A.D.</span>
-        <p><em>Lyrical Ballads, The Prelude, Tintern Abbey</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>Samuel Taylor Coleridge</strong>
-        <span>1772 – 1834 A.D.</span>
-        <p><em>The Rime of the Ancient Mariner, Kubla Khan, Biographia Literaria</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>John Keats</strong>
-        <span>1795 – 1821 A.D.</span>
-        <p><em>Ode to a Nightingale, Ode on a Grecian Urn, Endymion</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>Percy Bysshe Shelley</strong>
-        <span>1792 – 1822 A.D.</span>
-        <p><em>Ozymandias, Ode to the West Wind, Prometheus Unbound</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>Lord Byron</strong>
-        <span>1788 – 1824 A.D.</span>
-        <p><em>Childe Harold's Pilgrimage, Don Juan, She Walks in Beauty</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>William Blake</strong>
-        <span>1757 – 1827 A.D.</span>
-        <p><em>Songs of Innocence and of Experience, The Marriage of Heaven and Hell</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>Jane Austen</strong>
-        <span>1775 – 1817 A.D.</span>
-        <p><em>Pride and Prejudice, Sense and Sensibility, Emma</em></p>
-      </div>
-      <div class="lit-author-card">
-        <strong>Mary Shelley</strong>
-        <span>1797 – 1851 A.D.</span>
-        <p><em>Frankenstein; or, The Modern Prometheus</em></p>
-      </div>
-    </div>
-  </section>
+    <footer>
+        <p>&copy; 2026 English Literature Insights. All Rights Reserved.</p>
+    </footer>
 
-  <!-- DIRECTORY OF DETAILED ARTICLES -->
-  <section>
-    <h2 class="lit-section-heading">Detailed Articles & Author Studies</h2>
-    <div class="lit-directory-box">
-      <p style="margin: 0 0 10px 0; font-size: 0.9rem; color: #64748b;">Read our deep-dive analysis posts for this period:</p>
-      <ul class="lit-post-list">
-        <li><a href="/search/label/Romantic">Browse All Romantic Period Posts &amp; Notes →</a></li>
-        <!-- Add links to individual posts here as you publish -->
-      </ul>
-    </div>
-  </section>
-
-  <!-- NAVIGATION BAR -->
-  <nav class="lit-nav-bar">
-    <a href="/p/neo-classical-period.html" class="lit-nav-btn">← Neo-Classical Period</a>
-    <a href="/p/home.html" class="lit-nav-btn">Home Hub</a>
-    <a href="/p/victorian-period.html" class="lit-nav-btn">Victorian Period →</a>
-  </nav>
-
-</div>
+</body>
+</html>
