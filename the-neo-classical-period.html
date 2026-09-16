@@ -1,0 +1,392 @@
+<!-- =========================================================
+     NEO-CLASSICAL ERA HUB PAGE (BLOGGER READY)
+     ========================================================= -->
+
+<style>
+  .lit-era-wrap {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.65;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .lit-era-wrap * {
+    box-sizing: border-box;
+  }
+
+  /* Hero Banner */
+  .lit-hero-box {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 40px 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .lit-era-badge {
+    background: #0d9488;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .lit-hero-box h1 {
+    font-family: Georgia, Cambria, 'Times New Roman', serif;
+    font-size: 2.3rem;
+    margin: 8px 0;
+    color: #ffffff !important;
+    line-height: 1.25;
+  }
+
+  .lit-hero-box p {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    max-width: 750px;
+    margin: 10px auto 0 auto;
+  }
+
+  /* Section Titles */
+  .lit-section-heading {
+    font-family: Georgia, Cambria, serif;
+    font-size: 1.5rem;
+    color: #1e293b;
+    border-bottom: 2px solid #0d9488;
+    padding-bottom: 8px;
+    margin: 35px 0 20px 0;
+  }
+
+  /* Key Features List */
+  .lit-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .lit-feature-item {
+    background: #f8fafc;
+    border-left: 4px solid #0d9488;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .lit-feature-item strong {
+    color: #1e293b;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  .lit-feature-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #475569;
+  }
+
+  /* Sub-Periods Grid */
+  .lit-subperiod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+
+  .lit-subcard {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .lit-subcard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  }
+
+  .lit-subcard-tag {
+    color: #0d9488;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .lit-subcard h3 {
+    font-family: Georgia, Cambria, serif;
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+    color: #1e293b;
+  }
+
+  .lit-subcard p {
+    font-size: 0.9rem;
+    color: #475569;
+    margin: 0 0 10px 0;
+  }
+
+  .lit-highlight-box {
+    background: #f1f5f9;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    color: #334155;
+    margin-top: 10px;
+  }
+
+  .lit-highlight-box strong {
+    color: #0d9488;
+  }
+
+  /* Writers & Works Tags */
+  .lit-authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    margin-bottom: 35px;
+  }
+
+  .lit-author-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .lit-author-card strong {
+    color: #1e293b;
+    font-size: 0.98rem;
+    display: block;
+  }
+
+  .lit-author-card span {
+    font-size: 0.83rem;
+    color: #0d9488;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .lit-author-card p {
+    margin: 0;
+    font-size: 0.87rem;
+    color: #64748b;
+  }
+
+  /* Post Directory Section */
+  .lit-directory-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 35px;
+  }
+
+  .lit-post-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+  }
+
+  .lit-post-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .lit-post-list li:last-child {
+    border-bottom: none;
+  }
+
+  .lit-post-list a {
+    color: #0d9488;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .lit-post-list a:hover {
+    text-decoration: underline;
+  }
+
+  /* Navigation Footer */
+  .lit-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 2px solid #e2e8f0;
+  }
+
+  .lit-nav-btn {
+    display: inline-block;
+    background: #0f172a;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+
+  .lit-nav-btn:hover {
+    background: #0d9488;
+  }
+
+  @media (max-width: 600px) {
+    .lit-hero-box h1 { font-size: 1.7rem; }
+    .lit-nav-bar { flex-direction: column; text-align: center; }
+  }
+</style>
+
+<div class="lit-era-wrap">
+
+  <!-- HERO BANNER -->
+  <header class="lit-hero-box">
+    <span class="lit-era-badge">1660 – 1798 A.D.</span>
+    <h1>The Neo-Classical Period</h1>
+    <p>An era of Enlightenment rationalism, classical imitation, biting satire, social order, and the birth of the modern English novel.</p>
+  </header>
+
+  <!-- KEY CHARACTERISTICS -->
+  <section>
+    <h2 class="lit-section-heading">Core Literary Movements & Innovations</h2>
+    <div class="lit-features-grid">
+      <div class="lit-feature-item">
+        <strong>Enlightenment & Rationalism</strong>
+        <p>Prioritizing reason over emotion, scientific inquiry, logical order, and restraint over unchecked imagination.</p>
+      </div>
+      <div class="lit-feature-item">
+        <strong>Imitation of Classical Masters</strong>
+        <p>Adherence to classical Roman and Greek aesthetic rules (Virgil, Horace) aiming for correctness, decorum, and balance.</p>
+      </div>
+      <div class="lit-feature-item">
+        <strong>Mock-Heroic Satire & Verse</strong>
+        <p>Widespread use of the heroic couplet to criticize political corruption, moral hypocrisy, and social vanity.</p>
+      </div>
+      <div class="lit-feature-item">
+        <strong>Birth of Novels & Periodicals</strong>
+        <p>Emergence of prose fiction, formal essay journalism (<em>The Spectator</em>), and comprehensive English lexicography.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUB-PERIODS GRID -->
+  <section>
+    <h2 class="lit-section-heading">Sub-Periods & Major Ages</h2>
+    <div class="lit-subperiod-grid">
+
+      <!-- 1. Restoration -->
+      <div class="lit-subcard">
+        <span class="lit-subcard-tag">1660 – 1700 A.D.</span>
+        <h3>The Restoration Period</h3>
+        <p>Monarchy restored under Charles II. Reopening of theatres introduces female actors and witty, cynical Comedy of Manners drama.</p>
+        <div class="lit-highlight-box">
+          <strong>Key Figure:</strong> John Dryden (<em>Age of Dryden</em>), Aphra Behn, and William Congreve.
+        </div>
+      </div>
+
+      <!-- 2. Augustan -->
+      <div class="lit-subcard">
+        <span class="lit-subcard-tag">1700 – 1745 A.D.</span>
+        <h3>The Augustan Period</h3>
+        <p>Named after the prosperous Roman era of Emperor Augustus. Height of political satire, mock-epic poetry, and early realistic novels.</p>
+        <div class="lit-highlight-box">
+          <strong>Key Figures:</strong> Alexander Pope (<em>Age of Pope</em>), Jonathan Swift, Daniel Defoe, and Joseph Addison.
+        </div>
+      </div>
+
+      <!-- 3. Age of Sensibility -->
+      <div class="lit-subcard">
+        <span class="lit-subcard-tag">1745 – 1798 A.D.</span>
+        <h3>Age of Sensibility / Johnson</h3>
+        <p>Transition period from strict Neo-Classical logic toward emotional expression, literary criticism, biography, and early Romantic pre-cursor poetry.</p>
+        <div class="lit-highlight-box">
+          <strong>Key Figures:</strong> Dr. Samuel Johnson (<em>Age of Johnson</em>), James Boswell, Oliver Goldsmith, and Thomas Gray.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAJOR AUTHORS & WORKS -->
+  <section>
+    <h2 class="lit-section-heading">Master Satirists, Novelists & Critics</h2>
+    <div class="lit-authors-grid">
+      <div class="lit-author-card">
+        <strong>John Dryden</strong>
+        <span>1631 – 1700 A.D.</span>
+        <p><em>Mac Flecknoe, Absalom and Achitophel, All for Love</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Alexander Pope</strong>
+        <span>1688 – 1744 A.D.</span>
+        <p><em>The Rape of the Lock, An Essay on Criticism, The Dunciad</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Jonathan Swift</strong>
+        <span>1667 – 1745 A.D.</span>
+        <p><em>Gulliver's Travels, A Modest Proposal, A Tale of a Tub</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Dr. Samuel Johnson</strong>
+        <span>1709 – 1784 A.D.</span>
+        <p><em>A Dictionary of the English Language, Lives of the Poets, Rasselas</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Daniel Defoe</strong>
+        <span>1660 – 1731 A.D.</span>
+        <p><em>Robinson Crusoe, Moll Flanders</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Aphra Behn</strong>
+        <span>1640 – 1689 A.D.</span>
+        <p><em>Oroonoko, The Rover (First professional female English writer)</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Henry Fielding</strong>
+        <span>1707 – 1754 A.D.</span>
+        <p><em>Tom Jones, Joseph Andrews</em></p>
+      </div>
+      <div class="lit-author-card">
+        <strong>Thomas Gray</strong>
+        <span>1716 – 1771 A.D.</span>
+        <p><em>Elegy Written in a Country Churchyard</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTORY OF DETAILED ARTICLES -->
+  <section>
+    <h2 class="lit-section-heading">Detailed Articles & Author Studies</h2>
+    <div class="lit-directory-box">
+      <p style="margin: 0 0 10px 0; font-size: 0.9rem; color: #64748b;">Read our deep-dive analysis posts for this period:</p>
+      <ul class="lit-post-list">
+        <li><a href="/search/label/Neo-Classical">Browse All Neo-Classical Posts &amp; Notes →</a></li>
+        <!-- Add links to individual posts here as you publish -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="lit-nav-bar">
+    <a href="/p/early-modern-period.html" class="lit-nav-btn">← Renaissance / Early Modern Period</a>
+    <a href="/p/home.html" class="lit-nav-btn">Home Hub</a>
+    <a href="/p/romantic-period.html" class="lit-nav-btn">Romantic Period →</a>
+  </nav>
+
+</div>
